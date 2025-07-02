@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Destino - ViajaFácil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">ViajaFácil</h1>
+    <nav class="nav-header">
+      <a href="viaje.html">← Volver</a>
+      <a href="login.html">Iniciar Sesión</a>
+      <a href="https://wa.me/51987654321" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <img id="hero-image" src="" alt="" class="hero-image">
+    <div class="hero-content">
+      <h1 id="destino-titulo">Destino</h1>
+      <p id="destino-subtitulo">Descubre la magia de este lugar</p>
+    </div>
+  </section>
+
+  <div class="detalle-contenido">
+    <div class="info-grid">
+      <div class="info-principal">
+        <h2>Descripción del Destino</h2>
+        <p id="descripcion"></p>
+        
+        <h3>Atractivos Principales</h3>
+        <div class="atractivos" id="atractivos"></div>
+
+        <h3>¿Qué incluye el paquete?</h3>
+        <ul>
+          <li><i class="fas fa-hotel"></i> Alojamiento en hotel seleccionado</li>
+          <li><i class="fas fa-utensils"></i> Desayunos incluidos</li>
+          <li><i class="fas fa-bus"></i> Traslados desde/hacia el aeropuerto</li>
+          <li><i class="fas fa-map-marked-alt"></i> Tours guiados</li>
+          <li><i class="fas fa-ticket-alt"></i> Entradas a los principales atractivos</li>
+        </ul>
+
+        <h3>Itinerario Sugerido</h3>
+        <div class="itinerario" id="itinerario"></div>
+      </div>
+
+      <div class="info-lateral">
+        <div class="card-info">
+          <h3>Información Importante</h3>
+          <ul id="info-importante"></ul>
+        </div>
+
+        <div class="card-info">
+          <h3>Precio del Paquete</h3>
+          <p class="precio" id="precio">S/ 0</p>
+          <p>por persona</p>
+          <a id="boton-reserva" href="#" class="btn-reservar">Reservar Ahora</a>
+        </div>
+
+        <div class="card-info">
+          <h3>Recomendaciones</h3>
+          <ul id="recomendaciones"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="galeria-detalle" id="galeria"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 ViajaFácil - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="js/destino.js"></script>
+</body>
+</html>
