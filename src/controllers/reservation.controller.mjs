@@ -11,10 +11,13 @@ export const getAllReservations = async (req, res) => {
 
 export const createReservation = async (req, res) => {
   try {
+    console.log(req.body)
     const newReservation = new Reservation(req.body);
     const saved = await newReservation.save();
     res.status(201).json({ ok: true, data: saved });
-  } catch {
-    res.status(400).json({ ok: false, message: "Error al crear la reserva" });
+  } catch (err) {
+    res
+      .status(400)
+      .json({ ok: false, message: "Error al crear la reserva" + err });
   }
 };

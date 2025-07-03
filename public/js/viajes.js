@@ -25,9 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         <p class="tipo">${tipo}</p>
         <p class="precio">Desde <strong>S/ ${precio}</strong> por persona</p>
          <a href="/destino?id=${viaje._id}" class="btn">Ver más</a>
-        <a href="/formulario?destino=${encodeURIComponent(
-          lugar
-        )}" class="btn secondary">Reservar</a>
+        <a href="/formulario?id=${viaje._id}" class="btn secondary">Reservar</a>
       `;
 
       container.appendChild(card);

@@ -6,7 +6,7 @@ import {
 
 const router = Router();
 
-router.get("/reservations", getAllReservations);
-router.post("/reservations", createReservation);
+router.get("/", getAllReservations);
+router.post("/", createReservation);
 
 export default router;

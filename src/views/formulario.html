@@ -55,32 +55,6 @@
     </section>
   </main>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const fechaInput = document.getElementById("fecha");
-      const hoy = new Date();
-      const manana = new Date(hoy);
-      manana.setDate(hoy.getDate() + 1);
-
-      const yyyy = manana.getFullYear();
-      const mm = String(manana.getMonth() + 1).padStart(2, '0');
-      const dd = String(manana.getDate()).padStart(2, '0');
-      fechaInput.min = `${yyyy}-${mm}-${dd}`;
-
-      const form = document.getElementById("form-reserva");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        if (!form.checkValidity()) {
-          form.reportValidity();
-          return;
-        }
-
-        document.getElementById("mensaje-exito").style.display = "block";
-        form.reset();
-      });
-    });
-  </script>
+  <script src="/js/reservation.js"></script>
 </body>
 </html>

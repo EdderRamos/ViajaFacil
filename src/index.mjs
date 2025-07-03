@@ -17,6 +17,7 @@ dbConnect();
 const app = express();
 // html provider
 app.use(express.static("public"));
+app.use(express.json());
 
 app.use("/", viajeRouter);
 app.use("/destino", destinoRourter);
@@ -26,7 +27,7 @@ app.use("/formulario", formularioRourter);
 // entry api
 app.use("/api/travel-packages", travelPackage);
 app.use("/api/destination", destination);
-app.use("/api/reservation", reservation);
+app.use("/api/reservations", reservation);
 
 app.get("/hello", (req, res) => {
   res.send("Hello Express");
