@@ -37,3 +37,10 @@ coverage/
 # Otros temporales
 tmp/
 temp/
+
+# MongoDB 
+dump/
+*.mongodb
+
+# Env
+.env
