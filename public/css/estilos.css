@@ -459,3 +459,122 @@ footer {
     margin: 5px auto;
   }
 }
+
+.bodyFormulario {
+  font-family: sans-serif; 
+  background-color: #edeaea;
+  background-image: url('../images/cusco.jpg');
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.headerFormulario {
+  background-color: #0072ff;
+  padding: 20px;
+  border-radius: 10px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
+  margin-bottom: 20px; 
+  width: 90%; 
+  max-width: 600px; 
+}
+
+.headerFormulario h1 {
+  color: #f8f8f8; 
+  margin-bottom: 10px; 
+}
+
+.headerFormulario a {
+  color: #64b5f6; 
+  text-decoration: none; 
+}
+
+.main-content {
+  width: 90%; 
+  max-width: 600px; 
+}
+
+.formulario {
+  background-color: white;
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  border: 3px solid #1976d2;
+}
+
+.formulario h2 {
+  color: #1976d2;
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+.form-group {
+  margin-bottom: 15px; 
+}
+
+.form-group label {
+  display: block; 
+  margin-bottom: 5px; 
+  color: #1976d2; 
+  font-weight: bold; 
+}
+
+.form-group input,
+.form-group textarea {
+  width: calc(100% - 12px); 
+  padding: 8px; 
+  border: 3px solid #bbdefb; 
+  border-radius: 5px;
+  box-sizing: border-box; 
+  margin-bottom: 5px; 
+  color: #37474f; 
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #90a4ae; 
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #64b5f6; 
+  outline: none;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  background-color: #e3f2fd; 
+  cursor: pointer; 
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-group button {
+  background: linear-gradient(to bottom, #64b5f6, #42a5f5); 
+  color: white; 
+  padding: 10px 15px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  width: 100%; 
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.form-group button:hover {
+  background: linear-gradient(to bottom, #42a5f5, #1e88e5); 
+  cursor: pointer;
+}
+
+#mensaje-exito {
+  color: #64b5f6; 
+  display: none; 
+  margin-top: 10px; 
+  text-align: center;
+}

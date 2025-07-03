@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Formulario de Reserva</title>
-  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="../css/estilos.css">
 </head>
-<body>
-  <header class="header">
+<body class="bodyFormulario">
+  <header class="headerFormulario">
     <h1>Reserva tu viaje</h1>
     <a href="viaje.html" aria-label="Volver a la página anterior">← Volver</a>
   </header>
@@ -60,25 +60,25 @@
       const fechaInput = document.getElementById("fecha");
       const hoy = new Date();
       const manana = new Date(hoy);
-      manana.setDate(hoy.getDate() + 1);
+      manana.setDate(hoy.getDate() + 1); 
 
       const yyyy = manana.getFullYear();
-      const mm = String(manana.getMonth() + 1).padStart(2, '0');
+      const mm = String(manana.getMonth() + 1).padStart(2, '0'); 
       const dd = String(manana.getDate()).padStart(2, '0');
-      fechaInput.min = `${yyyy}-${mm}-${dd}`;
+      fechaInput.min = `${yyyy}-${mm}-${dd}`; 
 
       const form = document.getElementById("form-reserva");
 
       form.addEventListener("submit", function (e) {
-        e.preventDefault();
+        e.preventDefault(); 
 
         if (!form.checkValidity()) {
-          form.reportValidity();
-          return;
+          form.reportValidity(); 
+          return; 
         }
 
         document.getElementById("mensaje-exito").style.display = "block";
-        form.reset();
+        form.reset(); 
       });
     });
   </script>
