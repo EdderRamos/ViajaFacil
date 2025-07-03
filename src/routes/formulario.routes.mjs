@@ -5,7 +5,7 @@ import { dirname, join } from "path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const router = Router();
 
-router.get("/formulario", (req, res) => {
+router.get("/", (req, res) => {
   const viewsPath = join(__dirname, "..", "views", "formulario.html");
 
   res.sendFile(viewsPath, (err) => {
