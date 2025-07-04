@@ -4,6 +4,7 @@ import dbConnect from "../db/connect.mjs";
 import travelPackage from "./routes/api/travelPackage.routes.mjs";
 import destination from "./routes/api/destination.routes.mjs";
 import reservation from "./routes/api/reservation.routes.mjs";
+import contactMessage from "./routes/api/contact.routes.mjs";
 //env
 import dotenv from "dotenv";
 import viajeRouter from "./routes/viaje.routes.mjs";
@@ -28,6 +29,8 @@ app.use("/formulario", formularioRourter);
 app.use("/api/travel-packages", travelPackage);
 app.use("/api/destination", destination);
 app.use("/api/reservations", reservation);
+
+app.use("/api/contact-message", contactMessage);
 
 app.get("/hello", (req, res) => {
   res.send("Hello Express");
