@@ -25,7 +25,7 @@ function renderPackage(packageData) {
   document.getElementById("destino-titulo").textContent = destination.name;
   document.getElementById("destino-subtitulo").textContent =
     "Discover the magic of " + destination.name;
-  document.getElementById("hero-image").src = `/images/${gallery[0]}.jpg`;
+  document.getElementById("hero-image").src = `/images/${gallery[0]}`;
   document.getElementById("hero-image").alt = destination.name;
 
   // Description
@@ -58,9 +58,9 @@ function renderPackage(packageData) {
 
   const infoList = document.getElementById("info-importante");
   const importantDetails = [
-    `Altitude: ${destination.altitude}`,
-    `Climate: ${destination.climate}`,
-    `Best season: ${destination.bestSeason}`,
+    `Altitud: ${destination.altitude}`,
+    `Clima: ${destination.climate}`,
+    `Mejor Temporada: ${destination.bestSeason}`,
   ];
   importantDetails.forEach((info) => {
     const li = document.createElement("li");

@@ -1,20 +1,55 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
+:root {
+  --color-white: #ffffff;
+  --color-dark: #00171f;
+  --color-blue-dark: #003459;
+  --color-blue: #007ea7;
+  --color-blue-light: #00a8e8;
+
+  --color-text-primary: var(--color-dark);
+  --color-text-light: var(--color-white);
+  --color-bg-primary: var(--color-white);
+  --color-bg-dark: var(--color-blue-dark);
+  --color-accent: var(--color-blue-light);
+
+  --font-main: 'Roboto', sans-serif;
+
+  --font-regular: 400;
+  --font-bold: 700;
 }
 
-/* === HEADER === */
-.header {
-  background: #4074c7;
-  color: white;
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--color-blue-dark);
+  color: var(--color-white);
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   height: 70px;
+}
+
+
+
+.btn {
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: var(--color-blue);
 }
 
 .nav-header i {
@@ -71,15 +106,6 @@ body {
   margin-bottom: 20px;
 }
 
-.btn-destino {
-  background-color: #00a9c9;
-  color: white;
-  padding: 10px 25px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
 .carrusel {
   width: 100%;
   overflow: hidden;
@@ -100,7 +126,6 @@ body {
   height: 350px;
   object-fit: cover;
   image-rendering: auto;
-  border-radius: 10px;
 }
 
 .slides img.active {
@@ -111,13 +136,11 @@ body {
 .introduccion {
   background-color: #fff;
   text-align: center;
-  padding: 60px 20px;
 }
 
 .intro-contenido h3 {
   font-size: 1.6rem;
-  color: #2c7edb;
-  margin-bottom: 10px;
+  color: var(--color-blue-dark);
 }
 
 .titulo-vacacional {
@@ -157,6 +180,10 @@ body {
   height: 180px;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.card img:hover {
+  transform: scale(1.05);
 }
 
 .card h3 {
@@ -172,7 +199,7 @@ body {
 
 .card .duracion {
   font-weight: bold;
-  color: #0072ff;
+  color: var(--color-blue-light);
 }
 
 .card .salida, .card .tipo, .card .oferta {
@@ -191,25 +218,56 @@ body {
   margin-top: 8px;
 }
 
-.btn {
-  display: inline-block;
-  margin: 5px;
-  padding: 10px 15px;
-  background: #0072ff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
 
 .btn.secondary {
   background: #00c6ff;
+}
+
+/* == LEGAL INFO == */
+
+.legal-info {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  padding: 40px 20px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.legal-info h1 {
+  font-size: var(--font-xl);
+  margin-bottom: 20px;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.legal-info p {
+  font-size: var(--font-sm);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.legal-info strong {
+  color: var(--color-accent);
+  font-weight: var(--font-bold);
+}
+
+.legal-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.legal-info li {
+  margin-bottom: 10px;
+  font-size: var(--font-sm);
+  line-height: 1.5;
 }
 
 /* === FOOTER === */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #0072ff;
+  background-color: var(--color-blue);
   color: white;
 }
 
@@ -304,6 +362,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center; 
 }
 
 .hero-content {
@@ -371,7 +430,6 @@ footer {
   gap: 15px;
   margin-top: 40px;
 }
-
 .galeria-detalle img {
   width: 100%;
   height: 200px;
@@ -383,6 +441,7 @@ footer {
 .galeria-detalle img:hover {
   transform: scale(1.05);
 }
+
 
 .btn-reservar {
   display: inline-block;
@@ -399,7 +458,7 @@ footer {
 }
 
 .btn-reservar:hover {
-  background: #008ba3;
+  background: var(--color-blue);
 }
 
 .atractivos {
@@ -459,7 +518,7 @@ footer {
     margin: 5px auto;
   }
 }
-
+/* === FORMULARIO === */
 .bodyFormulario {
   font-family: sans-serif; 
   background-color: #edeaea;

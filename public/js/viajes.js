@@ -1,3 +1,12 @@
+// corousel
+const slides = document.querySelectorAll(".slides img");
+let index = 0;
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 4000);
+
 document.addEventListener("DOMContentLoaded", async () => {
   const container = document.getElementById("viajes-container");
   try {
@@ -10,14 +19,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.className = "card";
 
       const lugar = viaje.destination?.name || "Destino desconocido";
-      const imagen =
-        "images/" + viaje.gallery[0] + ".jpg" || "/img/placeholder.jpg";
+      const imagen = "images/" + viaje.gallery[0] || "/img/placeholder.jpg";
       const duracion = viaje.duration || "Duración no disponible";
       const tipo = viaje.type || "Tipo no especificado";
       const precio = viaje.price?.toFixed(2) || "0.00";
 
       card.innerHTML = `
-        <a href="/destino?lugar=${encodeURIComponent(lugar)}">
+        <a href="/destino?id=${viaje._id}">
           <img src="${imagen}" alt="${lugar}" />
         </a>
         <h3>Paquetes a ${lugar}</h3>

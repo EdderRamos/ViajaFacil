@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ViajaFácil - Descubre Perú</title>
   <link rel="stylesheet" href="/css/estilos.css" />
 </head>
+
 <body>
   <header class="header">
     <h1 class="logo">ViajaFácil</h1>
-<nav class="nav-header">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <a href="login.html">Iniciar Sesión</a>
-  <a href="https://wa.me/51987654321" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-  <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-  <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-</nav>
+    <nav class="nav-header">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+      <a href="https://wa.me/51987654321" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://facebook.com" target="_blank">
+        <i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram</a>
+    </nav>
   </header>
 
   <section class="carrusel">
@@ -26,9 +30,8 @@
       <img src="images/banner4.jpg" />
     </div>
     <div class="texto-superpuesto">
-      <h2>Te ayudamos a preparar el viaje<br><span>de tus sueños</span></h2>
+      <h2>Te ayudamos a preparar el viaje<br /><span>de tus sueños</span></h2>
       <p>Somos tu mejor opción en Asesoría de Planes Vacacionales.</p>
-      <a href="#paquetes" class="btn-destino">Descubrir Destinos</a>
     </div>
   </section>
 
@@ -36,48 +39,57 @@
     <div class="intro-contenido">
       <h3>Descubre los increíbles destinos que tenemos para ti</h3>
       <h1 class="titulo-vacacional">Paquetes Vacacionales</h1>
-      <a href="#paquetes" class="btn-intro">Deseo ver todos los destinos</a>
     </div>
   </section>
 
-  <main class="grid-container", id="viajes-container"> </main>
+  <main class="grid-container" , id="viajes-container"></main>
 
-<section class="legal-info">
-<h1>Información importante</h1>
-<p>Al comprar paquetes de viaje en ViajaFácil en alianza con agencias confiables como Despegar, accedes a promociones exclusivas.</p>
-<ul>
-<li>Los cambios de pasajes se realizan directamente con la agencia correspondiente.</li>
-<li>La compra de asientos y maletas se realiza con la aerolínea seleccionada.</li>
-<li>Reservas de hoteles, autos y seguros deben gestionarse con la agencia original.</li>
-<li>Las devoluciones de pasajes dependen de la tarifa adquirida.</li>
-<li>La acumulación de millas o beneficios dependerá del programa de viajero frecuente de la aerolínea.</li>
-<li>Los beneficios serán acreditados hasta 45 días después de la salida.</li>
-<li>Hasta 12 cuotas sin interés en compras con tarjetas OH, BBVA y Diners Club.</li>
-</ul>
-<p><strong>Atención Posventa:</strong></p>
-<p>Autogestión: Mis Viajes</p>
-<p>Teléfono Posventa: +51 8584441</p>
-<p><strong>Información legal:</strong></p>
-<p>ViajafacilPerú - RUC: 102010891647 / Razón social: ViajaFácil.com Perú S.A.C.</p>
-</section>
+  <section class="legal-info">
+    <h1>Información importante</h1>
+    <p>
+      Al comprar paquetes de viaje en ViajaFácil en alianza con agencias
+      confiables como Despegar, accedes a promociones exclusivas.
+    </p>
+    <ul>
+      <li>
+        Los cambios de pasajes se realizan directamente con la agencia
+        correspondiente.
+      </li>
+      <li>
+        La compra de asientos y maletas se realiza con la aerolínea
+        seleccionada.
+      </li>
+      <li>
+        Reservas de hoteles, autos y seguros deben gestionarse con la agencia
+        original.
+      </li>
+      <li>Las devoluciones de pasajes dependen de la tarifa adquirida.</li>
+      <li>
+        La acumulación de millas o beneficios dependerá del programa de
+        viajero frecuente de la aerolínea.
+      </li>
+      <li>
+        Los beneficios serán acreditados hasta 45 días después de la salida.
+      </li>
+      <li>
+        Hasta 12 cuotas sin interés en compras con tarjetas OH, BBVA y Diners
+        Club.
+      </li>
+    </ul>
+    <p><strong>Atención Posventa:</strong></p>
+    <p>Autogestión: Mis Viajes</p>
+    <p>Teléfono Posventa: +51 8584441</p>
+    <p><strong>Información legal:</strong></p>
+    <p>
+      ViajafacilPerú - RUC: 102010891647 / Razón social: ViajaFácil.com Perú
+      S.A.C.
+    </p>
+  </section>
 
   <footer>
     <p>© 2025 ViajaFácil - Todos los derechos reservados UTP</p>
   </footer>
-
-  <script>
-    const slides = document.querySelectorAll('.slides img');
-    let index = 0;
-    setInterval(() => {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }, 4000);
-  </script>
-
   <script src="/js/viajes.js"></script>
 </body>
+
 </html>
-
-
-
