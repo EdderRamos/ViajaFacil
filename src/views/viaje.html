@@ -4,92 +4,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ViajaFácil - Descubre Perú</title>
-  <link rel="stylesheet" href="/css/estilos.css" />
+  <title>ViajaFácil – Descubre Perú</title>
+
+  <!-- Tu hoja principal -->
+  <link rel="stylesheet" href="css/estilos.css" />
+
+  <!-- ⚡ Estilos mínimos para scroll‑reveal -->
+  <style>
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all .8s ease;
+    }
+
+    .scroll-reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- ============ ENCABEZADO ============ -->
   <header class="header">
     <h1 class="logo">ViajaFácil</h1>
-    <nav class="nav-header">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-      <a href="https://wa.me/51987654321" target="_blank">
-        <i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="https://facebook.com" target="_blank">
-        <i class="fab fa-facebook"></i> Facebook</a>
-      <a href="https://instagram.com" target="_blank">
-        <i class="fab fa-instagram"></i> Instagram</a>
-    </nav>
+    <!-- ============ Agregar menu ============ -->
   </header>
 
-  <section class="carrusel">
-    <div class="slides">
-      <img src="images/banner1.jpg" class="active" />
-      <img src="images/banner2.jpg" />
-      <img src="images/banner3.jpg" />
-      <img src="images/banner4.jpg" />
-    </div>
-    <div class="texto-superpuesto">
-      <h2>Te ayudamos a preparar el viaje<br /><span>de tus sueños</span></h2>
-      <p>Somos tu mejor opción en Asesoría de Planes Vacacionales.</p>
-    </div>
-  </section>
-
+  <!-- ============ INTRODUCCIÓN ============ -->
   <section class="introduccion">
     <div class="intro-contenido">
       <h3>Descubre los increíbles destinos que tenemos para ti</h3>
-      <h1 class="titulo-vacacional">Paquetes Vacacionales</h1>
+      <h1 class="titulo-vacacional">Los mejores Paquetes Vacacionales</h1>
     </div>
   </section>
 
-  <main class="grid-container" , id="viajes-container"></main>
+  <!-- ============ GRID DE 20 PAQUETES ============ -->
+  <main id="viajes-container" class="grid-container"></main>
 
-  <section class="legal-info">
-    <h1>Información importante</h1>
-    <p>
-      Al comprar paquetes de viaje en ViajaFácil en alianza con agencias
-      confiables como Despegar, accedes a promociones exclusivas.
-    </p>
-    <ul>
-      <li>
-        Los cambios de pasajes se realizan directamente con la agencia
-        correspondiente.
+  <!-- ============ INFORMACIÓN LEGAL ============ -->
+  <section class="info-importante">
+    <h2><i class="fas fa-info-circle"></i> Información importante</h2>
+    <ul class="lista-info">
+      <li><i class="fas fa-check-circle"></i> Al comprar paquetes de viaje en <strong>ViajaFácil</strong> en alianza con
+        agencias confiables como <strong>Despegar</strong>, accedes a promociones exclusivas.</li>
+      <li><i class="fas fa-exchange-alt"></i> Los cambios de pasajes se realizan directamente con la agencia
+        correspondiente.</li>
+      <li><i class="fas fa-suitcase-rolling"></i> La compra de asientos y maletas se realiza con la aerolínea
+        seleccionada.</li>
+      <li><i class="fas fa-hotel"></i> Reservas de hoteles, autos y seguros deben gestionarse con la agencia original.
       </li>
-      <li>
-        La compra de asientos y maletas se realiza con la aerolínea
-        seleccionada.
-      </li>
-      <li>
-        Reservas de hoteles, autos y seguros deben gestionarse con la agencia
-        original.
-      </li>
-      <li>Las devoluciones de pasajes dependen de la tarifa adquirida.</li>
-      <li>
-        La acumulación de millas o beneficios dependerá del programa de
-        viajero frecuente de la aerolínea.
-      </li>
-      <li>
-        Los beneficios serán acreditados hasta 45 días después de la salida.
-      </li>
-      <li>
-        Hasta 12 cuotas sin interés en compras con tarjetas OH, BBVA y Diners
-        Club.
+      <li><i class="fas fa-undo"></i> Las devoluciones de pasajes dependen de la tarifa adquirida.</li>
+      <li><i class="fas fa-plane"></i> La acumulación de millas o beneficios dependerá del programa de viajero frecuente
+        de la aerolínea.</li>
+      <li><i class="fas fa-clock"></i> Los beneficios serán acreditados hasta 45 días después de la salida.</li>
+      <li><i class="fas fa-credit-card"></i> Hasta 12 cuotas sin interés en compras con tarjetas <strong>OH</strong>,
+        <strong>BBVA</strong> y <strong>Diners Club</strong>.
       </li>
     </ul>
-    <p><strong>Atención Posventa:</strong></p>
-    <p>Autogestión: Mis Viajes</p>
-    <p>Teléfono Posventa: +51 8584441</p>
-    <p><strong>Información legal:</strong></p>
-    <p>
-      ViajafacilPerú - RUC: 102010891647 / Razón social: ViajaFácil.com Perú
-      S.A.C.
-    </p>
-  </section>
 
-  <footer>
-    <p>© 2025 ViajaFácil - Todos los derechos reservados UTP</p>
-  </footer>
-  <script src="/js/viajes.js"></script>
+    <div class="atencion-posventa">
+      <h3><i class="fas fa-headset"></i> Atención Posventa</h3>
+      <p><i class="fas fa-user-cog"></i> Autogestión: <strong>Mis Viajes</strong></p>
+      <p><i class="fas fa-phone"></i> Teléfono Posventa: <a href="tel:+518584441">+51 8584441</a></p>
+    </div>
+
+    <div class="info-legal">
+      <h3><i class="fas fa-balance-scale"></i> Información legal</h3>
+      <p><strong>ViajafacilPerú</strong> – RUC: 102010891647 / Razón social: ViajaFácil.com Perú S.A.C.</p>
+      <p>© 2025 ViajaFácil</p>
+    </div>
+  </section>
+</body>
+
+</html>
+<!-- ============ FOOTER ============ -->
+<footer>
+  <p>© 2025 ViajaFácil – Todos los derechos reservados UTP</p>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+  /* Carrusel existente (si lo usas) */
+  const slides = document.querySelectorAll('.slides img');
+  let index = 0;
+  setInterval(() => {
+    if (slides.length) {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }
+  }, 4000);
+
+  /* Observer para scroll‑reveal */
+  const toReveal = document.querySelectorAll('.scroll-reveal');
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('visible')),
+    { threshold: 0.2 }
+  );
+  toReveal.forEach(el => obs.observe(el));
+</script>
+<script src="/js/viajes.js"></script>
+
 </body>
 
 </html>

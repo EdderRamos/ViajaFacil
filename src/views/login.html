@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - ViajaFácil</title>
-  <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Básico</title>
+  <link rel="stylesheet" href="/css/login.css" />
 </head>
+
 <body>
-  <section class="login">
+  <div class="login-box">
     <h2>Iniciar Sesión</h2>
-    <form>
-      <label>Correo electrónico:</label>
-      <input type="email" required>
-      <label>Contraseña:</label>
-      <input type="password" required>
-      <button type="submit">Ingresar</button>
+    <form id="login-form">
+      <input type="text" id="username" name="username" placeholder="Usuario" required />
+      <input type="password" id="password" name="password" placeholder="Contraseña" required />
+      <button type="submit">Entrar</button>
     </form>
-    <a href="viaje.html">Volver al inicio</a>
-  </section>
+    <p id="error-msg" style="color:red; text-align:center;"></p>
+    <p id="success-msg" style="color:green; text-align:center;"></p>
+  </div>
+
+  <script src="/js/login.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,335 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+  background-color: #d2e6f7;
+  color: #333;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* --------- HERO & CARRUSEL --------- */
+.hero-container {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero-carousel .carousel-item img {
+  height: 60vh;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2rem;
+  border-radius: 10px;
+  color: #b62828;
+}
+
+.hero-text h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --------- Scroll‑reveal base --------- */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+.reveal-bottom { transform: translateY(40px); }
+
+.scroll-reveal.visible.reveal-left,
+.scroll-reveal.visible.reveal-right,
+.scroll-reveal.visible.reveal-bottom {
+  transform: none;
+}
+
+/* --------- Animaciones de las imágenes del carrusel --------- */
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes slideInBottom {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.slide-in-left   { animation: slideInLeft   1s ease-in-out; }
+.slide-in-right  { animation: slideInRight  1s ease-in-out; }
+.slide-in-bottom { animation: slideInBottom 1s ease-in-out; }
+
+/* --------- Iconos grandes y color corporativo --------- */
+i.fa-3x {
+  color: #0d6efd;
+}
+
+/* --------- Footer --------- */
+footer {
+  font-size: 0.95rem;
+  background-color: #003366;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+footer i {
+  color: #0d6efd;
+  margin-right: 5px;
+}
+
+/* --------- Navegación --------- */
+.menu-navegacion {
+  background-color: #fbfdfe;
+  padding: 12px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu-navegacion ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 24px;
+}
+
+.menu-navegacion a {
+  text-decoration: none;
+  color: #326a8a;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.menu-navegacion a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ff0000;
+}
+.header-servicios {
+  background-color: #198754;
+  color: white;
+  padding: 3rem 1rem;
+}
+
+.header-servicios h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.header-servicios p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* --- Asegura que el footer esté al final --- */
+html, body {
+  height: 100%;
+}
+
+body.interior {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.interior main {
+  flex: 1;
+}
+/* --------- Secciones generales --------- */
+section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Fondo suave para reseñas */
+.bg-light-subtle {
+  background-color: #f0f8ff;
+}
+
+/* --------- Reseñas --------- */
+.reseñas-section {
+  background-color: #e6f2ff;
+  padding: 40px 0;
+}
+
+.reseñas-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.reseña-box {
+  min-width: 280px;
+  max-width: 300px;
+  background-color: #ffffff;
+  border-left: 5px solid #0d6efd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.reseña-box:hover {
+  transform: translateY(-5px);
+}
+
+.reseña-box .blockquote-footer {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* --------- Testimonios --------- */
+.testimonios {
+  background-color: #f7fbff;
+  padding: 60px 0;
+}
+
+.testimonios .subtitulo {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.testimonios-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.testimonio-box {
+  min-width: 280px;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.testimonio-box:hover {
+  transform: translateY(-5px);
+}
+
+.color-1 {
+  background: linear-gradient(135deg, #6ec1e4, #378ee6);
+}
+
+.color-2 {
+  background: linear-gradient(135deg, #9fd3c7, #38a3a5);
+}
+
+.color-3 {
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+}
+
+.color-4 {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+}
+
+.estrellas {
+  font-size: 1.2rem;
+  color: gold;
+  margin: 10px 0;
+}
+
+.testimonio-box p,
+.testimonio-box strong {
+  font-size: 0.95rem;
+}
+
+/* --------- Imagen equipo en quienes somos --------- */
+header img.img-fluid {
+  max-height: 450px;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+html, body.interior {
+  height: 100%;
+}
+
+body.interior {
+  display: flex;
+  flex-direction: column;
+}
+
+body.interior main {
+  flex: 1;
+}
+/* --- Estilo encabezado de Promociones --- */
+.header-promociones {
+  background: linear-gradient(135deg, #004e92, #000428);
+  color: white;
+  padding: 3rem 1rem;
+}
+
+.header-promociones h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.header-promociones p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* --- Asegurar altura completa y footer al fondo --- */
+html, body {
+  height: 100%;
+}
+
+body.interior {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.interior main {
+  flex: 1;
+}

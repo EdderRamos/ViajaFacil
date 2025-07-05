@@ -85,7 +85,5 @@ function renderPackage(packageData) {
     galleryEl.appendChild(img);
   });
 
-  document.getElementById(
-    "boton-reserva"
-  ).href = `/reservar.html?id=${packageData._id}`;
+  document.getElementById("boton-reserva").href = `/formulario?id=${packageId}`;
 }
