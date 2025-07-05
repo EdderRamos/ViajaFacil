@@ -16,13 +16,30 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     const data = await response.json();
 
     if (response.ok) {
-      window.location.href = "/";
+      showModal("¡Bienvenido, " + username + "!");
     } else {
-      document.getElementById("error-msg").textContent =
-        data.message || "Credenciales incorrectas";
+      showModal(data.message || "Credenciales incorrectas");
     }
   } catch (error) {
     console.error("Error al enviar login:", error);
-    document.getElementById("error-msg").textContent = "Error en el servidor";
+    showModal("Error de conexión al servidor");
   }
+});
+
+function showModal(message) {
+  document.getElementById("modal-message").textContent = message;
+  document.getElementById("myModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+window.addEventListener("click", (e) => {
+  const modal = document.getElementById("myModal");
+  if (e.target === modal) closeModal();
+});
+
+document.getElementById("go-home-btn").addEventListener("click", () => {
+  window.location.href = "/";
 });
